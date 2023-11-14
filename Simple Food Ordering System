@@ -1,0 +1,250 @@
+#include <iostream>
+#include <limits>
+
+using namespace std;
+
+class MyClass
+{
+public:
+    int option = 0;
+    double total_amount = 0;
+};
+
+void build_meal() {
+    double add_on_total = 0;
+    int option1;
+    int option2;
+    int option3;
+    int option4;
+
+    MyClass myObj;
+
+    myObj.option;
+    myObj.total_amount;
+
+    int size;
+    cout << "Enter how many meals you'll be ordering: ";
+    cin >> size;
+
+    int arr[size];
+    for (int i = 0; i < size; i++) {
+
+        cout << "\t\t\t\t--------Menu--------\n\n";
+        cout << "1) Burrito------------------$10:30\n";
+        cout << "2) Burrito Bowl-------------$10:30\n";
+        cout << "3) Quesadilla---------------$8:30\n";
+        cout << "4) Tacos--------------------$8:30\n";
+        cout << "5) Kid's Meal---------------$5:30\n";
+        while (true) {
+            cout << "Please enter the number associated with your chosen meal: ";
+            cin >> myObj.option;
+
+            if (myObj.option >= 1 && myObj.option <= 5) {
+                // Valid input, exit the loop
+                break;
+            } else {
+                cout << "Invalid input. Please enter a number 1 through 5.\n";
+                // Clear the input buffer to handle non-numeric input
+                cin.clear();
+                cin.ignore(numeric_limits<streamsize>::max(), '\n');
+            }
+        }
+
+        switch (myObj.option) {
+            case 1:
+                myObj.total_amount += 10.30;
+                break;
+            case 2:
+                myObj.total_amount += 10.30;
+                break;
+            case 3:
+                myObj.total_amount += 8.30;
+                break;
+            case 4:
+                myObj.total_amount += 8.30;
+                break;
+            case 5:
+                myObj.total_amount += 5.30;
+                break;
+        }
+
+
+        cout << endl;
+        cout << endl;
+        cout << endl;
+
+
+        cout << "------------------------------------------" << endl;
+        cout << "1) Carne Asada ----------$6.40" << endl;
+        cout << "2) Chicken --------------$2.50" << endl;
+        cout << "3) Steak ----------------$4.75" << endl;
+        cout << "4) Barbacoa -------------$4.70" << endl;
+        cout << "5) Carnitas -------------$2.50" << endl;
+        cout << "------------------------------------------" << endl;
+        while (true) {
+            cout << "Please enter the number associated with your chosen meal: ";
+            cin >> option1;
+
+            if (option1 >= 1 && option1 <= 2) {
+                // Valid input, exit the loop
+                break;
+            } else {
+                cout << "Invalid input. Please enter a number 1 through 5.\n";
+                // Clear the input buffer to handle non-numeric input
+                cin.clear();
+                cin.ignore(numeric_limits<streamsize>::max(), '\n');
+            }
+        }
+
+        switch (option1) {
+            case 1:
+                add_on_total += 6.40;
+                break;
+            case 2:
+                add_on_total += 2.50;
+                break;
+            case 3:
+                add_on_total += 4.75;
+                break;
+            case 4:
+                add_on_total += 4.70;
+                break;
+            case 5:
+                add_on_total += 2.50;
+                break;
+            default:
+                cout << "You must try again and input a number 1 through 5;";
+        }
+
+
+        cout << endl;
+        cout << endl;
+        cout << endl;
+
+
+        cout << "------------------------------------------" << endl;
+        cout << "1) White Rice ----------$1.50" << endl;
+        cout << "2) Brown Rice ----------$1.50" << endl;
+        cout << "------------------------------------------" << endl;
+        while (true) {
+            cout << "Please enter the number associated with your chosen meal: ";
+            cin >> option2;
+
+            if (option2 >= 1 && option2 <= 2) {
+                // Valid input, exit the loop
+                break;
+            } else {
+                cout << "Invalid input. Please enter a number 1 through 2.\n";
+                // Clear the input buffer to handle non-numeric input
+                cin.clear();
+                cin.ignore(numeric_limits<streamsize>::max(), '\n');
+            }
+        }
+
+        switch (option2) {
+            case 1:
+                add_on_total += 1.50;
+                break;
+            case 2:
+                add_on_total += 1.50;
+                break;
+            default:
+                cout << "You must try again and input a number 1 through 2;";
+        }
+
+
+        cout << endl;
+        cout << endl;
+        cout << endl;
+
+
+        cout << "------------------------------------------" << endl;
+        cout << "1) Black Beans ----------$0.50" << endl;
+        cout << "2) Pinto Beans ----------$0.50" << endl;
+        cout << "------------------------------------------" << endl;
+        while (true) {
+            cout << "Please enter the number associated with your chosen meal: ";
+            cin >> option3;
+
+            if (option3 >= 1 && option3 <= 2) {
+                // Valid input, exit the loop
+                break;
+            } else {
+                cout << "Invalid input. Please enter a number 1 through 2.\n";
+                // Clear the input buffer to handle non-numeric input
+                cin.clear();
+                cin.ignore(numeric_limits<streamsize>::max(), '\n');
+            }
+        }
+
+        switch (option3) {
+            case 1:
+                add_on_total += 0.50;
+                break;
+            case 2:
+                add_on_total += 0.50;
+                break;
+            default:
+                cout << "You must try again and input a number 1 through 2;";
+        }
+
+        cout << endl;
+        cout << endl;
+        cout << endl;
+
+
+        int num_toppings;;
+        cout << "------------------------------------------" << endl;
+        cout << "1) Guacamole -------------------------------$3.45" << endl;
+        cout << "2) Tomato Salsa ----------------------------$0.50" << endl;
+        cout << "3) Roasted Chili-Corn Salsa ----------------$0.50" << endl;
+        cout << "4) Tomato-Green Chili Salsa ----------------$1.00" << endl;
+        cout << "5) Tomato-Red Chili Salsa ------------------$1.00" << endl;
+        cout << "6) Sour Cream ------------------------------$1.00" << endl;
+        cout << "7) Fajita Veggies --------------------------$1.00" << endl;
+        cout << "------------------------------------------" << endl;
+        cout
+                << "How many different types of topping would you like. Look at the menu for so you can decide on the quantity: "
+                << endl;
+        cin >> num_toppings;
+
+        for (int i = 0; i < num_toppings; i++) {
+            cout << "What would you like to add as toppings for your meal:";
+            cin >> option4;
+            switch (option4) {
+                case 1:
+                    add_on_total += 3.45;
+                    break;
+                case 2:
+                    add_on_total += 0.50;
+                    break;
+                case 3:
+                    add_on_total += 0.50;
+                    break;
+                case 4:
+                    add_on_total += 1.00;
+                    break;
+                case 5:
+                    add_on_total += 1.00;
+                    break;
+                case 6:
+                    add_on_total += 1.00;
+                    break;
+                case 7:
+                    add_on_total += 1.00;
+                    break;
+                default:
+                    cout << "You must try again and input a number 1 through 7:";
+            }
+        }
+        cout << add_on_total + myObj.total_amount;
+    }
+}
+
+int main ()
+{
+    build_meal();
+    cout << "dollars will be your total.";
+    return 0;
+}
+
