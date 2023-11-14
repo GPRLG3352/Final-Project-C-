@@ -209,8 +209,20 @@ void build_meal() {
         cin >> num_toppings;
 
         for (int i = 0; i < num_toppings; i++) {
-            cout << "What would you like to add as toppings for your meal:";
-            cin >> option4;
+            while (true) {
+                cout << "Please enter the number associated with your chosen meal: ";
+                cin >> option4;
+
+                if (option4 >= 1 && option4 <= 7) {
+                    // Valid input, exit the loop
+                    break;
+                } else {
+                    cout << "Invalid input. Please enter a number 1 through 7.\n";
+                    // Clear the input buffer to handle non-numeric input
+                    cin.clear();
+                    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+                }
+            }
             switch (option4) {
                 case 1:
                     add_on_total += 3.45;
