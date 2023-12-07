@@ -23,10 +23,11 @@ void build_meal() {
     myObj.total_amount;
 
     int size;
+    int* ptr_size = &size;
     cout << "Enter how many meals you'll be ordering: ";
     cin >> size;
 
-    int arr[size];
+    int arr[*ptr_size];
     for (int i = 0; i < size; i++) {
 
         cout << "\t\t\t\t--------Menu--------\n\n";
@@ -85,7 +86,7 @@ void build_meal() {
             cout << "Please enter the number associated with your chosen meal: ";
             cin >> option1;
 
-            if (option1 >= 1 && option1 <= 2) {
+            if (option1 >= 1 && option1 <= 5) {
                 // Valid input, exit the loop
                 break;
             } else {
@@ -256,7 +257,7 @@ void build_meal() {
 int main ()
 {
     build_meal();
-    cout << "dollars will be your total.";
+    cout << " dollars will be your total.";
     return 0;
 }
 
